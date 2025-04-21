@@ -40,7 +40,7 @@ export default function ContactSection() {
                   <h3 className="font-subheading text-xl mb-1">Our Bakery</h3>
                   <p className="font-body text-pink-100">
                     123 Sweet Avenue<br />
-                    Victoria Island, Lagos
+                    Victoria Island, London
                   </p>
                 </div>
               </div>
@@ -50,7 +50,7 @@ export default function ContactSection() {
                 <div>
                   <h3 className="font-subheading text-xl mb-1">Call Us</h3>
                   <p className="font-body text-pink-100">
-                    +234 812 345 6789<br />
+                    +134 812 345 6789<br />
                     Mon-Sat: 9AM - 6PM
                   </p>
                 </div>
