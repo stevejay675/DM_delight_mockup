@@ -1,26 +1,134 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* Color System */
+  --color-cream: #fff5eb;
+  --color-blush: #ffd6e0;
+  --color-raspberry: #e30b5c;
+  --color-truffle: #3a2e2a;
+  --color-gold: #d4af37;
+  --color-lavender: #e6e6fa;
+
+  /* Background */
+  --color-bg: var(--color-cream);
+  --color-bg-alt: #f5e9dd;
+
+  /* Text */
+  --color-text: var(--color-truffle);
+  --color-text-light: #5a4d48;
+  --color-text-inverted: #ffffff;
+
+  /* Primary Color Scale */
+  --color-primary-50: #fff9fb;
+  --color-primary-100: #ffeef2;
+  --color-primary-200: #ffd6e0;
+  --color-primary-300: #ffbdce;
+  --color-primary-400: #ff8fa9;
+  --color-primary-500: #ff6b8b;
+  --color-primary-600: #e30b5c;
+  --color-primary-700: #c00a4d;
+  --color-primary-800: #9d083e;
+  --color-primary-900: #7a062f;
+
+  /* Secondary Color Scale */
+  --color-secondary-50: #f9f9fe;
+  --color-secondary-100: #f3f3fc;
+  --color-secondary-200: #e6e6fa;
+  --color-secondary-300: #d9d9f8;
+  --color-secondary-400: #c0c0f4;
+  --color-secondary-500: #a7a7f0;
+  --color-secondary-600: #8e8eec;
+  --color-secondary-700: #7575e8;
+  --color-secondary-800: #5c5ce4;
+  --color-secondary-900: #4343e0;
+
+  /* Accent Color Scale */
+  --color-accent-50: #fbf7ec;
+  --color-accent-100: #f7efd9;
+  --color-accent-200: #f4e5c2;
+  --color-accent-300: #eed9a6;
+  --color-accent-400: #e8cd8a;
+  --color-accent-500: #d4af37;
+  --color-accent-600: #b38c2a;
+  --color-accent-700: #926a1d;
+  --color-accent-800: #714810;
+  --color-accent-900: #502603;
+
+  /* Semantic Colors */
+  --color-border: rgba(58, 46, 42, 0.1);
+  --color-shadow: rgba(58, 46, 42, 0.08);
+  --color-overlay: rgba(0, 0, 0, 0.3);
+
+  /* Font System */
+  --font-heading: var(--font-parisienne);
+  --font-subheading: var(--font-playfair);
+  --font-body: var(--font-dm-serif);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+
+
+:root{
+
+}
+
+
+@layer base {
+  *{
+    /* box-sizing: border-box; */
+    margin: 0;
+    padding: 0;
+    
   }
-}
+  :root {
+    font-family: var(--font-dm-serif);
+    color: #3a2e2a;
+    background: #fff5eb;
+  }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  h1, h2, h3 {
+    font-family: var(--font-parisienne);
+  }
+
+  h4, h5, h6 {
+    font-family: var(--font-playfair);
+  }
+
+  a{
+    text-decoration: none;
+    color: #3a2e2a;
+  }
+
+  body{
+    color: #3a2e2a;
+  }
+
+  button{
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+
+  .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background: rgba(217, 119, 6, 0.2);
+    opacity: 1;
+    margin: 0 6px !important;
+  }
+  .swiper-pagination-bullet-active {
+    background: rgba(217, 119, 6, 1);
+    width: 24px;
+    border-radius: 4px;
+  }
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: none;
+  }
+  @media (min-width: 640px) {
+    .swiper-button-prev,
+    .swiper-button-next {
+      display: flex;
+    }
+  }
+  
 }
